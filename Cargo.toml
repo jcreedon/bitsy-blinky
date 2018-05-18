@@ -1,0 +1,27 @@
+[package]
+name = "bitsy-blinky"
+version = "0.1.0"
+authors = ["Jacob Creedon <jcreedon@gmail.com>"]
+description = "1BitSquared 1Bitsy Blinky Rust Example"
+keywords = ["arm", "cortex-m"]
+categories = ["embedded", "no-std"]
+repository = "https://github.com/jcreedon/bitsy-blinky"
+
+[profile.release]
+opt-level = "s"
+lto = true
+debug = true
+
+[dependencies.stm32f41x]
+git = "https://github.com/jcreedon/stm32f41x"
+# features = ["rt"]
+# version = "0.1.0"
+
+[dependencies.cortex-m]
+version = "0.5.0"
+
+[dependencies.cortex-m-rt]
+version = "0.5.0"
+
+[dependencies.panic-abort]
+version = "0.1.1"
